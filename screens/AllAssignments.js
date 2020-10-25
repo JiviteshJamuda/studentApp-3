@@ -56,8 +56,8 @@ export default class AllAssignments extends React.Component {
                 <View>
                     <Header
                         placement="left"
-                        leftComponent={<Icon name="menu" onPress={()=>{ this.props.navigation.toggleDrawer() }} />}
-                        centerComponent={{text:"All Assignments", style:{fontSize:25, fontWeight:"bold"}}} 
+                        leftComponent={<Icon name="menu" onPress={()=>{ this.props.navigation.toggleDrawer() }} color="white"/>}
+                        centerComponent={{text:"All Assignments", style:{fontSize:25, fontWeight:"bold", color:"white"}}} 
                         backgroundColor="purple"
                     />
                     <FlatList
