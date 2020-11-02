@@ -5,8 +5,8 @@ import firebase from "firebase";
 import db from "../config";
 
 export default class AllAssignments extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             allAssignments : []
         };
@@ -56,7 +56,7 @@ export default class AllAssignments extends React.Component {
                 <View>
                     <Header
                         placement="left"
-                        leftComponent={<Icon name="menu" onPress={()=>{ this.props.navigation.toggleDrawer() }} color="white"/>}
+                        leftComponent={<Icon name="menu" onPress={()=>{ this.props.navigation.toggleDrawer() }} color="yellow"/>}
                         centerComponent={{text:"All Assignments", style:{fontSize:25, fontWeight:"bold", color:"white"}}} 
                         backgroundColor="purple"
                     />

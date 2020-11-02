@@ -16,7 +16,8 @@ export default class ViewAssignmentDetails extends React.Component {
             answer : "",
             emailId : firebase.auth().currentUser.email,
             name : "",
-            assignmentId : this.props.navigation.getParam("details")["assignment_id"]
+            assignmentId : this.props.navigation.getParam("details")["assignment_id"],
+            totalMarks : this.props.navigation.getParam("details")["total_marks"],
         };
         this.requestRef = null;
     }   // this.props.navigation.getParam("details")["request_id"],
@@ -48,6 +49,11 @@ export default class ViewAssignmentDetails extends React.Component {
                 "student_name" : this.state.name,
                 "student_email_id" : this.state.emailId,
                 "assignment_id" : this.state.assignmentId,
+                "marks" : null,
+                "feedback" : null,
+                "question" : this.state.question,
+                "subject" : this.state.subject,
+                "total_marks" : this.state.totalMarks
             })
             
             ToastAndroid.showWithGravityAndOffset(
@@ -75,7 +81,7 @@ export default class ViewAssignmentDetails extends React.Component {
                 <View>
                     <Header
                         placement="left"
-                        leftComponent={<Icon name="arrow-left" type="font-awesome" onPress={()=>{this.props.navigation.goBack()}} color="white"/>}
+                        leftComponent={<Icon name="arrow-left" type="font-awesome" onPress={()=>{this.props.navigation.navigate("Drawer")}} color="yellow"/>}
                         centerComponent={{text:"Assignment Details", style:{fontSize:25, fontWeight:"bold", color:"white"}}}
                         backgroundColor="purple"
                     />

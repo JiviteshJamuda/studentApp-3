@@ -12,5 +12,5 @@ export const DrawerNavigator = createDrawerNavigator(
         MarkedAssignments : {screen : MarkedAssignments},
     },
     {contentComponent : SideBarMenu},
-    {initialRouteName : "AllAsignments"},
+    {initialRouteName : "MarkedAssignment"},
 )
